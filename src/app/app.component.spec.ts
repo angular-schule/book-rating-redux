@@ -1,4 +1,4 @@
-import { BooksActions } from './_actions/books.action';
+// import { BooksActions } from './_actions/books.action';
 import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 
@@ -14,12 +14,12 @@ describe('AppComponent', () => {
       declarations: [
         AppComponent,
       ],
-      providers: [{
-        provide: BooksActions,
-        useValue: {
-          loadBooks: () => {}
-        }
-      }],
+      // providers: [{
+      //   provide: BooksActions,
+      //   useValue: {
+      //     loadBooks: () => {}
+      //   }
+      // }],
       schemas: [NO_ERRORS_SCHEMA]
     }).compileComponents();
   }));
