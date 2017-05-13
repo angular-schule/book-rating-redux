@@ -1,11 +1,8 @@
 <br-create-book (bookCreated)="addBookToList($event)"></br-create-book>
 
-<ng-container *ngIf="booksState$ | async as booksState">
+<br-book
+  [book]="b"
+  *ngFor="let b of books; let i = index"
+  (rated)="reorderBooks($event)"></br-book>
 
-  <br-book
-    [book]="b"
-    *ngFor="let b of booksState.books"></br-book>
-
-  Anzahl der Bücher: {{ booksState.books.length }}
-
-</ng-container>
+Anzahl der Bücher: {{ books.length }}

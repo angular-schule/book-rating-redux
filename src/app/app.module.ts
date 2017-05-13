@@ -16,7 +16,7 @@ import { BookStoreService } from './shared/book-store.service';
 import { rootReducer } from './_reducers/rootReducer';
 import { IAppState } from './_reducers/types';
 import { CounterActions } from './_actions/counter.action';
-import { BooksActions } from './_actions/books.action';
+// import { BooksActions } from './_actions/books.action';
 import { CounterComponent } from './counter/counter.component';
 
 @NgModule({
@@ -40,7 +40,7 @@ import { CounterComponent } from './counter/counter.component';
     BookStoreService,
     DevToolsExtension,
     CounterActions,
-    BooksActions
+    // BooksActions
   ],
   bootstrap: [AppComponent]
 })
