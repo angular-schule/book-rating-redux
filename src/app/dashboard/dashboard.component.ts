@@ -1,8 +1,10 @@
+import {BooksState} from '../_reducers/types';
 import { Component, OnInit } from '@angular/core';
 
 import { BookStoreService } from './../shared/book-store.service';
 import { BookComponent } from './../book/book.component';
 import { Book } from '../shared/book';
+import { select } from '@angular-redux/store';
 
 import { Observable } from 'rxjs/Observable';
 
@@ -11,19 +13,21 @@ import { Observable } from 'rxjs/Observable';
   templateUrl: './dashboard.component.html'
 })
 export class DashboardComponent implements OnInit {
-  books: Book[] = [];
+
+  @select()
+  booksState$: Observable<BooksState>;
 
   constructor(private bs: BookStoreService) { }
 
   ngOnInit() {
-    this.bs.getAll().subscribe(books => this.books = books);
+
   }
 
   reorderBooks() {
-    this.books.sort((a, b) => b.rating - a.rating);
+    //this.books.sort((a, b) => b.rating - a.rating);
   }
 
   addBookToList(book: Book) {
-    this.books.push(book);
+    //this.books.push(book);
   }
 }
