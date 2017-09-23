@@ -2,10 +2,10 @@ import { combineReducers } from 'redux-seamless-immutable'; // this is NOT impor
 import { routerReducer } from '@angular-redux/router';
 
 import { counterReducer } from './counter.reducer';
-// import { booksReducer } from './books.reducer';
+import { booksReducer } from './books.reducer';
 
 export const rootReducer = combineReducers({
   counterState: counterReducer,
-  // booksState: booksReducer,
+  booksState: booksReducer,
   router: routerReducer
 });

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-// import { BooksActions } from './_actions/books.action';
+import { BooksActions } from './_actions/books.action';
 
 @Component({
   selector: 'br-root',
@@ -10,8 +10,8 @@ export class AppComponent {
   title = 'Book Rating';
 
   constructor(
-    // booksActions: BooksActions
+    booksActions: BooksActions
   ) {
-    // booksActions.loadBooks();
+    booksActions.loadBooks();
   }
 }
